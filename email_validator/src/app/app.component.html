@@ -1,0 +1,16 @@
+<div class="container">
+  <md-toolbar color="primary">Email Validation</md-toolbar>
+  <md-card>
+    <md-card-content>
+      <form class="centered">
+        <h3>Please fill in your email below</h3>
+        <md-form-field>
+          <input mdInput [(ngModel)]="emailField" placeholder="Email" (keydown)="keyDown()" name="email">
+        </md-form-field>
+        <div [ngClass]="valid ? 'is-shown' : 'not-shown'">Email is correct.</div>
+        <br>
+        <button md-raised-button color="accent" (click)="validate()">Submit</button>
+      </form>
+    </md-card-content>
+  </md-card>
+</div>
